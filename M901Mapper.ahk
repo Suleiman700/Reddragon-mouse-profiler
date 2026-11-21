@@ -10,6 +10,10 @@
 
 #Requires AutoHotkey v2.0
 #SingleInstance Force
+;@Ahk2Exe-SetName M901 Mapper
+;@Ahk2Exe-SetDescription M901 Mapper - remap Redragon M901 side buttons
+;@Ahk2Exe-SetVersion 1.0.0
+;@Ahk2Exe-SetCopyright github.com/Suleiman700/Reddragon-mouse-profiler
 Persistent
 #include Lib\AutoHotInterception.ahk
 
@@ -409,6 +413,8 @@ ToggleEnabled() {
 ToggleStartup() {
   if FileExist(StartupLink) {
     try FileDelete(StartupLink)
+  } else if A_IsCompiled {
+    FileCreateShortcut(A_ScriptFullPath, StartupLink, A_ScriptDir, "/hidden", "M901 Mapper")
   } else {
     FileCreateShortcut(A_AhkPath, StartupLink, A_ScriptDir, '"' A_ScriptFullPath '" /hidden', "M901 Mapper")
   }
