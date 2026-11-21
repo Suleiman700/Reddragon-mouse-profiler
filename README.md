@@ -1,5 +1,7 @@
 # M901 Mapper
 
+![M901 Mapper – remap your Redragon M901 side buttons on Windows 10/11](docs/banner.png)
+
 Remap the extra buttons of a **Redragon M901 Perdition** (original laser model, USB ID `04D9:FC02`) on Windows 10/11.
 
 ## Why this exists
